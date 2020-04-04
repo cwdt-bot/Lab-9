@@ -24,4 +24,9 @@ public class EmptyList<T> extends InfiniteListImpl<T> {
     public InfiniteListImpl<T> filter(Predicate<? super T> predicate) {
         return new EmptyList<>();
     }
+
+    @Override
+    public InfiniteListImpl<T> limit(long n) {
+        return this;
+    }
 }
