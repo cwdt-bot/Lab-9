@@ -88,7 +88,7 @@ public class InfiniteListImpl<T> implements InfiniteList<T> {
     public void forEach(Consumer<? super T> action) {
         InfiniteListImpl<T> curr = this;
         while (!curr.isEmpty()) {
-            this.head.get().ifPresent(action);
+            curr.head.get().ifPresent(action);
             curr = curr.tail.get();
         }
     }
